@@ -19,3 +19,7 @@ html {
   form{
       text-align: center;
   }
+
+  label{
+      font-size: 1.8rem;
+  }
