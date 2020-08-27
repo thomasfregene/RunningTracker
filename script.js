@@ -11,6 +11,10 @@ function addNewEntry(newEntry){
     entriesWrapper.appendChild(listItem)
 }
 
+function reducer(total, currentValue){
+    return total + currentValue
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
