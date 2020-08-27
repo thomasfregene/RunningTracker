@@ -1,3 +1,4 @@
+//global variable
 let entries = [];
 
 const entriesWrapper = document.querySelector('#entries')
@@ -7,7 +8,6 @@ function addNewEntry(newEntry){
     const listItem = document.createElement('li');
     const listValue = document.createTextNode(newEntry.toFixed(1));
     listItem.appendChild(listValue)
-
     entriesWrapper.appendChild(listItem)
 }
 
@@ -26,6 +26,11 @@ function calcAverage(){
     document.getElementById('average').innerText = average;
 }
 
+function weeklyHigh(){
+    const high = Math.max(...entries)
+    console.log(high)
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
@@ -36,6 +41,7 @@ function handleSubmit(event){
     addNewEntry(entry);
     calcTotal()
     calcAverage();
+    weeklyHigh()
 }
 //query selector acts like the css selector i.e can target html element and classes 
 const form = document
