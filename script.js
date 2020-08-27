@@ -28,7 +28,7 @@ function calcAverage(){
 
 function weeklyHigh(){
     const high = Math.max(...entries)
-    console.log(high)
+    document.getElementById('high').innerText = high
 }
 
 function handleSubmit(event){
