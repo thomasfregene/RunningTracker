@@ -1,5 +1,15 @@
 let entries = [];
 
+const entriesWrapper = document.querySelector('#entries')
+
+function addNewEntry(newEntry){
+    const listItem = document.createElement('li');
+    const listValue = document.createTextNode(newEntry);
+    listItem.appendChild(listValue)
+
+    entriesWrapper.appendChild(listItem)
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
@@ -7,7 +17,7 @@ function handleSubmit(event){
     if(!entry) return;
     document.querySelector("form").reset();
     entries.push(entry);
-    console.log(entries)
+    addNewEntry(entry)
 }
 //query selector acts like the css selector i.e can target html element and classes 
 const form = document
