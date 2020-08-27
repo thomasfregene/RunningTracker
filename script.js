@@ -15,6 +15,10 @@ function reducer(total, currentValue){
     return total + currentValue
 }
 
+function calTotal(entries){
+    const totalValue = entries.reduce(reducer)
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
