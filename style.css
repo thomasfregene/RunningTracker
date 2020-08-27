@@ -53,3 +53,8 @@ html {
       list-style: none;
       justify-content: space-between;
   }
+
+  li{
+      border: 1px solid;
+      padding: 1rem 1.5rem;
+  }
