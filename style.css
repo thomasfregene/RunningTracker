@@ -58,3 +58,8 @@ html {
       border: 1px solid;
       padding: 1rem 1.5rem;
   }
+
+  .entriesWrapper{
+      padding: 1rem 0;
+      font-size: 1.6rem;
+  }
