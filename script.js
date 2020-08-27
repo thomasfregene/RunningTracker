@@ -15,8 +15,10 @@ function reducer(total, currentValue){
     return total + currentValue
 }
 
-function calTotal(entries){
+function calcTotal(){
     const totalValue = entries.reduce(reducer)
+    document.getElementById('total').innerText = totalValue;
+    document.getElementById('progressTotal').innerText = totalValue;
 }
 
 function handleSubmit(event){
@@ -26,7 +28,8 @@ function handleSubmit(event){
     if(!entry) return;
     document.querySelector("form").reset();
     entries.push(entry);
-    addNewEntry(entry)
+    addNewEntry(entry);
+    calcTotal()
 }
 //query selector acts like the css selector i.e can target html element and classes 
 const form = document
