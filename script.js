@@ -21,6 +21,11 @@ function calcTotal(){
     document.getElementById('progressTotal').innerText = totalValue;
 }
 
+function calcAverage(){
+    const average = entries.reduce(reducer) / entries.length;
+    document.getElementById('average').innerText = average;
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
