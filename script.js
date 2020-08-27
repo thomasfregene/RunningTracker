@@ -16,13 +16,13 @@ function reducer(total, currentValue){
 }
 
 function calcTotal(){
-    const totalValue = entries.reduce(reducer)
+    const totalValue = entries.reduce(reducer).toFixed(1);
     document.getElementById('total').innerText = totalValue;
     document.getElementById('progressTotal').innerText = totalValue;
 }
 
 function calcAverage(){
-    const average = entries.reduce(reducer) / entries.length;
+    const average = (entries.reduce(reducer) / entries.length).toFixed(1);
     document.getElementById('average').innerText = average;
 }
 
@@ -35,6 +35,7 @@ function handleSubmit(event){
     entries.push(entry);
     addNewEntry(entry);
     calcTotal()
+    calcAverage();
 }
 //query selector acts like the css selector i.e can target html element and classes 
 const form = document
