@@ -5,7 +5,7 @@ const entriesWrapper = document.querySelector('#entries')
 function addNewEntry(newEntry){
     entriesWrapper.removeChild(entriesWrapper.firstElementChild);
     const listItem = document.createElement('li');
-    const listValue = document.createTextNode(newEntry);
+    const listValue = document.createTextNode(newEntry.toFixed(1));
     listItem.appendChild(listValue)
 
     entriesWrapper.appendChild(listItem)
