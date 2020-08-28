@@ -1,7 +1,9 @@
-//global variable
+//global variables
+const goal = 25;
 let entries = [];
 
-const entriesWrapper = document.querySelector('#entries')
+const entriesWrapper = document.querySelector('#entries');
+document.querySelector('#target').innerText = goal;
 
 function addNewEntry(newEntry){
     entriesWrapper.removeChild(entriesWrapper.firstElementChild);
