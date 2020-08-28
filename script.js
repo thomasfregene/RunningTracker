@@ -33,6 +33,12 @@ function weeklyHigh(){
     document.getElementById('high').innerText = high
 }
 
+function calcGoal(){
+    const totalValue = entries.reduce(reducer).toFixed(1);
+    const completedPercent = totalValue / (goal/100);
+    const progressCircle = document.querySelector('#progressCircle');
+}
+
 function handleSubmit(event){
     //prevent default prevent browser to reload on submit
     event.preventDefault();
@@ -43,7 +49,8 @@ function handleSubmit(event){
     addNewEntry(entry);
     calcTotal()
     calcAverage();
-    weeklyHigh()
+    weeklyHigh();
+    calcGoal()
 }
 //query selector acts like the css selector i.e can target html element and classes 
 const form = document
