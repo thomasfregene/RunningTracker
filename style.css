@@ -114,3 +114,17 @@ html {
     border-radius: 50%;
     background: #1c262f;
   }
+
+  @media screen and (min-width: 800px){
+      body{
+          width: 60%;
+      }
+
+      input[type="number"]{
+          width: 40%;
+      }
+
+      svg{
+          max-width: 50%;
+      }
+  }
