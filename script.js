@@ -37,6 +37,7 @@ function calcGoal(){
     const totalValue = entries.reduce(reducer).toFixed(1);
     const completedPercent = totalValue / (goal/100);
     const progressCircle = document.querySelector('#progressCircle');
+    progressCircle.style.background = "conic-gradient(#70db70 50%, #2d3740 50%)"
 }
 
 function handleSubmit(event){
